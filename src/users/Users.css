@@ -1,0 +1,11 @@
+.user-list-title{
+	text-align: left;
+	margin-left: 20px;
+}
+
+table.user-table{
+	margin:20px; 
+}
+.user-table td{
+	text-align: left;
+}
