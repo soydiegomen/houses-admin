@@ -6,8 +6,7 @@ import './index.css';
 
 //Bootstrp3
 import '../node_modules/bootstrap3/dist/css/bootstrap.min.css';
-//import App from './App';
-import App from './RoutingApp';
+import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
 firebase.initializeApp({
