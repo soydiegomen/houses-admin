@@ -1,4 +1,5 @@
 const houses = (state = [], action) => {
+  console.log('isActive', action.isActive);
   switch (action.type) {
     case 'ADD_HOUSE':
       return [
@@ -8,7 +9,7 @@ const houses = (state = [], action) => {
           title: action.title,
           address: action.address,
           price: action.price,
-          isActive: true,
+          isActive: action.isActive
         }
       ]
     default:
