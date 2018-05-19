@@ -1,5 +1,4 @@
 const houses = (state = [], action) => {
-  console.log('isActive', action.isActive);
   switch (action.type) {
     case 'ADD_HOUSE':
       return [
@@ -11,7 +10,19 @@ const houses = (state = [], action) => {
           price: action.price,
           isActive: action.isActive
         }
-      ]
+      ];
+    case 'INACTIVE_HOUSE':
+      return state.map(house =>
+        (house.id === action.id)
+          ? {...house, isActive: false}
+          : house
+      );
+    case 'DELETE_HOUSE':
+      return state.map(house =>
+        (house.id === action.id)
+          ? {...house, isActive: false}
+          : house
+      );
     default:
       return state
   }

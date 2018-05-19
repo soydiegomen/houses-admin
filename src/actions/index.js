@@ -9,3 +9,17 @@ export const addHouse = function (title, address, price) {
     isActive: true
   };
 }
+
+export const inactiveHouse = function (id) {
+  return {
+    type: 'INACTIVE_HOUSE',
+    id
+  };
+}
+
+export const deleteHouse = function (id) {
+    return {
+      type: 'DELETE_HOUSE',
+      id
+    };
+}

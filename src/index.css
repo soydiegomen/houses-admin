@@ -3,3 +3,16 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+table.house-list{
+  width: 600px;
+  margin: 20px;
+}
+.house-list td{
+  border: 1px solid;
+  padding: 10px;
+}
+
+.house-list a{
+  margin-right: 10px;
+}

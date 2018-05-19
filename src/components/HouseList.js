@@ -5,16 +5,21 @@ import House from './House';
 class HouseList extends Component {
   render() {
     let houses = this.props.houses;
-    console.log('this.props.houses', this.props.houses);
+    let inactiveHouse = this.props.inactiveHouse;
+    let deleteHouse = this.props.deleteHouse;
+
     return (
-      <ul>
-        {houses.map(house =>
-          <House
-            key={house.id}
-            {...house}
-          />
-        )}
-      </ul>
+      <table className="house-list">
+        <tbody>
+          {houses.map(house =>
+            <House
+              key={house.id}
+              {...house}
+              onClickInactive={ () => deleteHouse(house.id)}
+            />
+          )}
+        </tbody>
+      </table>
     );
   }
 }
