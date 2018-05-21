@@ -18,11 +18,7 @@ const houses = (state = [], action) => {
           : house
       );
     case 'DELETE_HOUSE':
-      return state.map(house =>
-        (house.id === action.id)
-          ? {...house, isActive: false}
-          : house
-      );
+      return state.filter(house => house.id !== action.id);
     default:
       return state
   }

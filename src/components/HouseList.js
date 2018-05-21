@@ -15,7 +15,8 @@ class HouseList extends Component {
             <House
               key={house.id}
               {...house}
-              onClickInactive={ () => deleteHouse(house.id)}
+              onClickInactive={ () => inactiveHouse(house.id)}
+              onClickDelete={ () => deleteHouse(house.id)}
             />
           )}
         </tbody>

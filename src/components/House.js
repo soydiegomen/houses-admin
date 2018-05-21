@@ -18,7 +18,7 @@ class House extends Component {
         <td>{this.props.isActive ? 'true' : 'false'}</td>
         <td>
           { this.renderInactiveButton(this.props.isActive) }
-          <a>Delete</a></td>
+          <a onClick={this.props.onClickDelete}>Delete</a></td>
       </tr>
     );
   }
