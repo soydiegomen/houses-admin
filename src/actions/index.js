@@ -23,3 +23,10 @@ export const deleteHouse = function (id) {
       id
     };
 }
+
+export const changeKeyword = function (keyword) {
+    return {
+      type: 'CHANGE_KEYWORD',
+      keyword
+    };
+}

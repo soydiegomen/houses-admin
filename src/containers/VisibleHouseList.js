@@ -3,10 +3,18 @@ import { inactiveHouse } from '../actions';
 import { deleteHouse } from '../actions';
 import HouseList from '../components/HouseList';
 
+const getHouses = function (houses, keyword){
+  console.log('keyword', keyword);
+  if(keyword){
+    return houses.filter(h => h.title === keyword);
+  }else{
+    return houses;
+  }
+}
+
 const mapStateToProps = function (state){
-  console.log('state.houses', state.houses);
   return ({
-    houses: state.houses
+    houses: getHouses(state.houses, state.keyword)
   });
 }
 

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import AddHouse from '../containers/AddHouse';
 import VisibleHouseList from '../containers/VisibleHouseList';
+import Footer from '../containers/Footer';
 
 class Home extends Component {
 	render() {
@@ -10,6 +11,7 @@ class Home extends Component {
 					<div>
 						<AddHouse />
 						<VisibleHouseList />
+						<Footer />
 					</div>
       	</div>
 
